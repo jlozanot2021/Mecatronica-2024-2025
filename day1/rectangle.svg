@@ -1,0 +1,72 @@
+<!-- Comienzo del documento  -->
+<!-- Con los atributos `width` y `height` se define el tamaño de la página 
+     que contiene el dibujo
+-->  
+ <svg width="1000" height="500" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Dibujar un rectángulo azul 
+   Atributos:  
+     * x,y: Coordenadas del punto superior izquierdo del rectangulo 
+     * width, height: Anchura y altura del rectángulo 
+     * fill: Color del relleno del rectángulo 
+     * rx: Radio de redondeo de las esquinas en pixeles
+  -->
+  <rect width="200" height="100" x="10" y="10" rx="50" fill="red" />
+
+  <!--
+    Dibujar un círculo amarillo 
+    Atributos:                   
+    * cx,cy: Centro del circulo  
+    * r: Radio                   
+  -->
+  <circle cx="500" cy="100" r="45" fill="yellow" />
+
+    <!-- * Dibujar una elipse
+       * cx,cy: Centro de la elipse
+       * rx: Radio horizontal
+       * ry: Radio vertical 
+  -->
+  <ellipse rx="100" ry="50" cx="200" cy="200" fill="orange"/>
+       
+    <!--  
+        Dibujar una línea recta:
+        * x1,y1: Punto inicial
+        * x2,y2: Punto final 
+        * Atributos de estilo:
+        * stroke : Color del trazo 
+    -->
+  <line x1="0" y1="0" x2="300" y2="200" stroke="red" />
+
+
+  <!-- * Dibujo de un triángulo azul, con trazo negro
+    * points: Secuencia de puntos x,y del poligono 
+  -->
+  <polygon points="10,10 100,10 50,150" fill="blue" stroke="black" />
+
+
+    <!-- * Escritura de texto
+      * x,y: Coordenadas de la parte superior izquierda del texto 
+    -->
+  <text x="150" y="200" fill="green">¡SVG a tope!</text>
+
+    <!-- * Animar un circulo: Circulo en movimiento en horizontal
+      Hacia la derecha 
+  -->
+  <circle cx="50" cy="50" r="5" fill="white" >
+
+    <!-- 
+      * Atributo a animar: Coordenada x
+      * Animar desde el principio: begin="0s"
+      * Duracion de la animacion: dur="2s" (2 segundos)
+      * cx varia desde 50 a 200
+      * Repetir indefinidamente 
+    -->
+    <animate
+      attributeName="cx"
+      begin="0s"
+      dur="2s"
+      from="50"
+      to="200"
+      repeatCount="indefinite" />
+  </circle>
+</svg> 
